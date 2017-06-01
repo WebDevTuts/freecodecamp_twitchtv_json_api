@@ -9,4 +9,12 @@ $(document).ready(function() {
       $('#fccStatus').html('Free Code Camp is currently ONLINE!');
     }
   });
+
+  var followerURL = "https://api.twitch.tv/kraken/users/freecodecamp/follows/channels/?client_id=qzsmdq24e2j4upt48jj6jm68u00n2r4";
+  $.getJSON(followerURL, function(data2) {
+    for (var i = 0; i < data2.follows.length; i++) {
+      var displayName = data2.follows[i].channel.display_name;
+      console.log(displayName);
+    }
+  });
 });
