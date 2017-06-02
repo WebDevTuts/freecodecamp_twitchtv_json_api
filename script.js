@@ -1,5 +1,9 @@
 $(document).ready(function() {
   fetchAll("all");
+
+  $("#btn-all-channels").on("click", function() {
+    fetchAll("all");
+  });
 });
 
 function fetchAll(status) {
