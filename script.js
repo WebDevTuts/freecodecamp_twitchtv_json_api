@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+  fetchAll("all");
 });
 
 function fetchAll(status) {
