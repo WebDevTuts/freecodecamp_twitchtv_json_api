@@ -4,6 +4,10 @@ $(document).ready(function() {
   $("#btn-all-channels").on("click", function() {
     fetchAll("all");
   });
+
+  $("#btn-online-channels").on("click", function() {
+    fetchAll("online");
+  });
 });
 
 function fetchAll(status) {
