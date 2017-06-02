@@ -12,6 +12,9 @@ function fetchAll(status) {
   fetch(featuredURI, false, status);
 }
 
-function fetch(apiURL, includeFCC, status) {
-
+function fetch(apiURI, includeFCC, status) {
+  $.ajax({
+    type: 'GET',
+    url: apiURI
+  })
 }
