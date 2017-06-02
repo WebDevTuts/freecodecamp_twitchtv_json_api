@@ -60,10 +60,19 @@ function fetch(apiURI, includeFCC, status) {
         twitchTitle = data.name;
         twitchText = data.status  + "<br/><br/><br/><br/><br/>";
         twitchURI = data.url;
-        twitchLogo = data.log;
+        twitchLogo = data.logo;
         twitchStreaming = "Offline";
 
         twitchItem = "<a href=\"" + twitchURI + "\" class=\"list-group-item\" > <span class=\"badge badger\">" + twitchStreaming + "</span><img class=\"img-logo img-circle\" src=\"" + twitchLogo + "\"></img><h3 class=\"list-group-item-heading\">" + twitchTitle + "</h3>" + "<p class=\"list-group-item-text\">" + twitchText +  "</p></a>";
+
+        if (status === "all") {
+          $("#twitch-list").append(twitchItem);
+        } else if (status === "online" && twitchStreaming == "Online") {
+          $("#twitch-list").append(twitchItem);
+        } else if (status === "offline" && twitchStreaming == "Offline") {
+          $("#twitch-list").append(twitchItem);
+        }
+      }
     }
   })
 }
