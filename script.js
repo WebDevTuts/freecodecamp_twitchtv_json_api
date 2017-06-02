@@ -8,6 +8,10 @@ $(document).ready(function() {
   $("#btn-online-channels").on("click", function() {
     fetchAll("online");
   });
+
+  $("#btn-offline-channels").on("click", function() {
+    fetchAll("offline");
+  });
 });
 
 function fetchAll(status) {
